@@ -6,24 +6,39 @@ Pure geometry primitives and foundational vocabulary for RustUse.
 `use-geometry` crate is a facade-only crate: it contains crate documentation, public reexports, and
 a prelude module. Implementation lives in focused child crates with explicit boundaries.
 
-The set is intentionally broad inside pure geometry. Many crates begin with primitive value types,
-count records, or descriptors and can grow into algorithms incrementally without forcing the facade
-to become a monolith.
+The set is intentionally broad inside pure geometry. Many advanced families begin with primitive
+value types, metadata records, or descriptors so algorithms can grow inside child crates without
+turning the facade into a monolith. Named objects belong inside family crates rather than standalone
+object crates.
 
 ## Taxonomy
 
-| Group                            | Crates                                                                                                                |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Foundations                      | `use-geometry-core`, `use-coordinate`, `use-dimension`, `use-angle`, `use-point`                                      |
-| Affine primitives                | `use-bounds`, `use-line`, `use-ray`, `use-segment`, `use-plane`, `use-hyperplane`                                     |
-| Transformations                  | `use-transform`, `use-affine`, `use-projection`, `use-reflection`                                                     |
-| Metric relations                 | `use-distance`, `use-orientation`, `use-intersection`, `use-containment`, `use-congruence`, `use-similarity`          |
-| Curves and conics                | `use-circle`, `use-conic`, `use-curve`, `use-polyline`, `use-bezier`, `use-spline`                                    |
-| Planar regions                   | `use-triangle`, `use-rectangle`, `use-polygon`                                                                        |
-| Polytopes and solids             | `use-simplex`, `use-orthotope`, `use-polytope`, `use-polyhedron`, `use-regular-polytope`                              |
-| Surfaces and representations     | `use-surface`, `use-mesh`, `use-face`, `use-cell`                                                                     |
-| Constructions and decompositions | `use-hull`, `use-triangulation`, `use-tessellation`, `use-voronoi`, `use-delaunay`                                    |
-| Folding and unfolding            | `use-folding`, `use-crease`, `use-origami`, `use-linkage`, `use-unfolding`, `use-rigid-folding`, `use-polyhedral-net` |
+| Group                                              | Crates                                                                                                                                                |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Foundations                                        | `use-geometry-core`, `use-coordinate`, `use-dimension`, `use-angle`, `use-point`                                                                      |
+| Affine and Euclidean primitives                    | `use-bounds`, `use-line`, `use-ray`, `use-segment`, `use-plane`, `use-hyperplane`, `use-circle`, `use-sphere`, `use-hypersphere`, `use-torus`         |
+| Transformations                                    | `use-transform`, `use-affine`, `use-projection`, `use-reflection`, `use-inversion`                                                                    |
+| Metric and relational geometry                     | `use-distance`, `use-orientation`, `use-intersection`, `use-containment`, `use-congruence`, `use-similarity`, `use-dihedral`                          |
+| Curves and conics                                  | `use-conic`, `use-curve`, `use-polyline`, `use-bezier`, `use-spline`                                                                                  |
+| Surfaces and manifolds                             | `use-surface`, `use-manifold`                                                                                                                         |
+| Planar regions                                     | `use-triangle`, `use-rectangle`, `use-polygon`                                                                                                        |
+| Polytopes and solids                               | `use-simplex`, `use-orthotope`, `use-polytope`, `use-polyhedron`, `use-regular-polytope`, `use-archimedean`, `use-catalan-solid`, `use-johnson-solid` |
+| Polytope notation and classification               | `use-schlafli`, `use-wythoff`, `use-coxeter`, `use-uniform-polytope`                                                                                  |
+| Incidence, projective geometry, and configurations | `use-incidence`, `use-projective`, `use-configuration`, `use-duality`                                                                                 |
+| Representations and complexes                      | `use-mesh`, `use-face`, `use-cell`, `use-complex`                                                                                                     |
+| Constructions and decompositions                   | `use-hull`, `use-triangulation`, `use-tessellation`, `use-voronoi`, `use-delaunay`                                                                    |
+| Folding and unfolding                              | `use-folding`, `use-crease`, `use-origami`, `use-linkage`, `use-unfolding`, `use-rigid-folding`, `use-polyhedral-net`                                 |
+
+## Placement Notes
+
+- The facade crate only reexports child crates.
+- Named objects live in family crates: cuboctahedron in `use-archimedean`, 24-cell, 600-cell, and 120-cell in `use-regular-polytope`, and Schlafli double six in `use-configuration`.
+- Schlafli symbols live in `use-schlafli`.
+- Hypersphere and 3-sphere vocabulary lives in `use-hypersphere`; ordinary three-dimensional sphere measurements live in `use-sphere`.
+- Dihedral angles live in `use-dihedral`.
+- Polyhedral nets use `use-polyhedral-net`; `use-net` is reserved for the RustUse networking set.
+- `use-vector` remains in the sibling `use-math` workspace and is used by child crates that need vector primitives.
+- `use-geode` remains in `use-math` and is not part of spatial geometry.
 
 ## Installation
 
@@ -39,27 +54,30 @@ Choose child crates directly when you want a narrower dependency surface:
 ```toml
 [dependencies]
 use-point = "0.0.6"
-use-polygon = "0.0.6"
+use-schlafli = "0.0.6"
+use-regular-polytope = "0.0.6"
 ```
 
 ## Usage
 
 ```rust
-use use_geometry::{Point2, Triangle};
+use use_geometry::{Point2, RegularPolytope4, Sphere, Triangle};
 
 let triangle = Triangle::new(
     Point2::new(0.0, 0.0),
     Point2::new(4.0, 0.0),
     Point2::new(0.0, 3.0),
 );
+let sphere = Sphere::new(3.0).expect("valid sphere");
 
 assert_eq!(triangle.area(), 6.0);
-assert_eq!(triangle.perimeter(), 12.0);
+assert_eq!(sphere.diameter(), 6.0);
+assert_eq!(RegularPolytope4::TwentyFourCell.schlafli_symbol().to_string(), "{3, 4, 3}");
 ```
 
 ## Scope
 
-- Pure geometry primitives, descriptors, and direct measurement helpers.
+- Pure geometry primitives, descriptors, notation, and direct measurement helpers.
 - Small geometry algorithms with explicit naming and predictable behavior.
 - Validated constructors for external or user-provided numeric input.
 - Focused crate boundaries that compose cleanly with other RustUse sets.

@@ -28,47 +28,65 @@ Publish the workspace in dependency order:
 9. `use-line`
 10. `use-segment`
 11. `use-circle`
-12. `use-triangle`
-13. `use-containment`
-14. `use-congruence`
-15. `use-similarity`
-16. `use-intersection`
-17. `use-ray`
-18. `use-plane`
-19. `use-hyperplane`
-20. `use-transform`
-21. `use-affine`
-22. `use-projection`
-23. `use-reflection`
-24. `use-curve`
-25. `use-conic`
-26. `use-polyline`
-27. `use-bezier`
-28. `use-spline`
-29. `use-rectangle`
-30. `use-polygon`
-31. `use-simplex`
-32. `use-orthotope`
-33. `use-polytope`
-34. `use-polyhedron`
-35. `use-regular-polytope`
-36. `use-surface`
-37. `use-mesh`
-38. `use-face`
-39. `use-cell`
-40. `use-hull`
-41. `use-triangulation`
-42. `use-tessellation`
-43. `use-voronoi`
-44. `use-delaunay`
-45. `use-folding`
-46. `use-crease`
-47. `use-origami`
-48. `use-linkage`
-49. `use-unfolding`
-50. `use-rigid-folding`
-51. `use-polyhedral-net`
-52. `use-geometry`
+12. `use-sphere`
+13. `use-hypersphere`
+14. `use-torus`
+15. `use-triangle`
+16. `use-containment`
+17. `use-congruence`
+18. `use-similarity`
+19. `use-intersection`
+20. `use-dihedral`
+21. `use-inversion`
+22. `use-ray`
+23. `use-plane`
+24. `use-hyperplane`
+25. `use-transform`
+26. `use-affine`
+27. `use-projection`
+28. `use-reflection`
+29. `use-curve`
+30. `use-conic`
+31. `use-polyline`
+32. `use-bezier`
+33. `use-spline`
+34. `use-rectangle`
+35. `use-polygon`
+36. `use-simplex`
+37. `use-orthotope`
+38. `use-polytope`
+39. `use-polyhedron`
+40. `use-schlafli`
+41. `use-regular-polytope`
+42. `use-uniform-polytope`
+43. `use-archimedean`
+44. `use-catalan-solid`
+45. `use-johnson-solid`
+46. `use-wythoff`
+47. `use-coxeter`
+48. `use-incidence`
+49. `use-projective`
+50. `use-configuration`
+51. `use-duality`
+52. `use-surface`
+53. `use-manifold`
+54. `use-mesh`
+55. `use-face`
+56. `use-cell`
+57. `use-complex`
+58. `use-hull`
+59. `use-triangulation`
+60. `use-tessellation`
+61. `use-voronoi`
+62. `use-delaunay`
+63. `use-folding`
+64. `use-crease`
+65. `use-origami`
+66. `use-linkage`
+67. `use-unfolding`
+68. `use-rigid-folding`
+69. `use-polyhedral-net`
+70. `use-geometry`
 
 The `Publish` workflow uses that order automatically when `crate = all`.
 
@@ -129,11 +147,16 @@ for crate in \
   use-line \
   use-segment \
   use-circle \
+  use-sphere \
+  use-hypersphere \
+  use-torus \
   use-triangle \
   use-containment \
   use-congruence \
   use-similarity \
   use-intersection \
+  use-dihedral \
+  use-inversion \
   use-ray \
   use-plane \
   use-hyperplane \
@@ -152,11 +175,24 @@ for crate in \
   use-orthotope \
   use-polytope \
   use-polyhedron \
+  use-schlafli \
   use-regular-polytope \
+  use-uniform-polytope \
+  use-archimedean \
+  use-catalan-solid \
+  use-johnson-solid \
+  use-wythoff \
+  use-coxeter \
+  use-incidence \
+  use-projective \
+  use-configuration \
+  use-duality \
   use-surface \
+  use-manifold \
   use-mesh \
   use-face \
   use-cell \
+  use-complex \
   use-hull \
   use-triangulation \
   use-tessellation \

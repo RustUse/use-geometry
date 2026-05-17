@@ -312,6 +312,114 @@ changelog_update = true
 changelog_path = "./CHANGELOG.md"
 
 [[package]]
+name = "use-sphere"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-hypersphere"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-dihedral"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-uniform-polytope"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-archimedean"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-catalan-solid"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-johnson-solid"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-schlafli"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-wythoff"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-coxeter"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-incidence"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-projective"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-configuration"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-duality"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-inversion"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-torus"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-manifold"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-complex"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
 name = "use-geometry"
 release = true
 changelog_update = true

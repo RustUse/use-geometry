@@ -1,0 +1,24 @@
+[package]
+name = "use-catalan-solid"
+description = "Catalan solid metadata for the RustUse geometry workspace"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-catalan-solid"
+keywords = ["geometry", "catalan", "solid"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+use-archimedean.workspace = true
+
+[lints]
+workspace = true

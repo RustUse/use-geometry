@@ -174,6 +174,10 @@ name = "use-angle"
 version = "0.0.6"
 
 [[package]]
+name = "use-archimedean"
+version = "0.0.6"
+
+[[package]]
 name = "use-bezier"
 version = "0.0.6"
 dependencies = [
@@ -189,6 +193,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "use-catalan-solid"
+version = "0.0.6"
+dependencies = [
+ "use-archimedean",
+]
+
+[[package]]
 name = "use-cell"
 version = "0.0.6"
 
@@ -199,6 +210,20 @@ dependencies = [
  "use-bounds",
  "use-geometry-core",
  "use-point",
+]
+
+[[package]]
+name = "use-complex"
+version = "0.0.6"
+dependencies = [
+ "use-cell",
+]
+
+[[package]]
+name = "use-configuration"
+version = "0.0.6"
+dependencies = [
+ "use-incidence",
 ]
 
 [[package]]
@@ -222,6 +247,10 @@ name = "use-coordinate"
 version = "0.0.6"
 
 [[package]]
+name = "use-coxeter"
+version = "0.0.6"
+
+[[package]]
 name = "use-crease"
 version = "0.0.6"
 dependencies = [
@@ -240,6 +269,13 @@ name = "use-delaunay"
 version = "0.0.6"
 
 [[package]]
+name = "use-dihedral"
+version = "0.0.6"
+dependencies = [
+ "use-angle",
+]
+
+[[package]]
 name = "use-dimension"
 version = "0.0.6"
 
@@ -249,6 +285,10 @@ version = "0.0.6"
 dependencies = [
  "use-point",
 ]
+
+[[package]]
+name = "use-duality"
+version = "0.0.6"
 
 [[package]]
 name = "use-face"
@@ -268,27 +308,39 @@ dependencies = [
  "proptest",
  "use-affine",
  "use-angle",
+ "use-archimedean",
  "use-bezier",
  "use-bounds",
+ "use-catalan-solid",
  "use-cell",
  "use-circle",
+ "use-complex",
+ "use-configuration",
  "use-congruence",
  "use-conic",
  "use-containment",
  "use-coordinate",
+ "use-coxeter",
  "use-crease",
  "use-curve",
  "use-delaunay",
+ "use-dihedral",
  "use-dimension",
  "use-distance",
+ "use-duality",
  "use-face",
  "use-folding",
  "use-geometry-core",
  "use-hull",
  "use-hyperplane",
+ "use-hypersphere",
+ "use-incidence",
  "use-intersection",
+ "use-inversion",
+ "use-johnson-solid",
  "use-line",
  "use-linkage",
+ "use-manifold",
  "use-mesh",
  "use-orientation",
  "use-origami",
@@ -301,22 +353,28 @@ dependencies = [
  "use-polyline",
  "use-polytope",
  "use-projection",
+ "use-projective",
  "use-ray",
  "use-rectangle",
  "use-reflection",
  "use-regular-polytope",
  "use-rigid-folding",
+ "use-schlafli",
  "use-segment",
  "use-similarity",
  "use-simplex",
+ "use-sphere",
  "use-spline",
  "use-surface",
  "use-tessellation",
+ "use-torus",
  "use-transform",
  "use-triangle",
  "use-triangulation",
  "use-unfolding",
+ "use-uniform-polytope",
  "use-voronoi",
+ "use-wythoff",
 ]
 
 [[package]]
@@ -338,11 +396,31 @@ dependencies = [
 ]
 
 [[package]]
+name = "use-hypersphere"
+version = "0.0.6"
+
+[[package]]
+name = "use-incidence"
+version = "0.0.6"
+
+[[package]]
 name = "use-intersection"
 version = "0.0.6"
 dependencies = [
  "use-point",
 ]
+
+[[package]]
+name = "use-inversion"
+version = "0.0.6"
+dependencies = [
+ "use-geometry-core",
+ "use-point",
+]
+
+[[package]]
+name = "use-johnson-solid"
+version = "0.0.6"
 
 [[package]]
 name = "use-line"
@@ -356,6 +434,10 @@ dependencies = [
 
 [[package]]
 name = "use-linkage"
+version = "0.0.6"
+
+[[package]]
+name = "use-manifold"
 version = "0.0.6"
 
 [[package]]
@@ -432,6 +514,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "use-projective"
+version = "0.0.6"
+
+[[package]]
 name = "use-ray"
 version = "0.0.6"
 dependencies = [
@@ -458,6 +544,9 @@ dependencies = [
 [[package]]
 name = "use-regular-polytope"
 version = "0.0.6"
+dependencies = [
+ "use-schlafli",
+]
 
 [[package]]
 name = "use-rigid-folding"
@@ -465,6 +554,10 @@ version = "0.0.6"
 dependencies = [
  "use-angle",
 ]
+
+[[package]]
+name = "use-schlafli"
+version = "0.0.6"
 
 [[package]]
 name = "use-segment"
@@ -489,6 +582,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "use-sphere"
+version = "0.0.6"
+
+[[package]]
 name = "use-spline"
 version = "0.0.6"
 dependencies = [
@@ -501,6 +598,10 @@ version = "0.0.6"
 
 [[package]]
 name = "use-tessellation"
+version = "0.0.6"
+
+[[package]]
+name = "use-torus"
 version = "0.0.6"
 
 [[package]]
@@ -530,6 +631,10 @@ name = "use-unfolding"
 version = "0.0.6"
 
 [[package]]
+name = "use-uniform-polytope"
+version = "0.0.6"
+
+[[package]]
 name = "use-vector"
 version = "0.0.6"
 
@@ -539,6 +644,10 @@ version = "0.0.6"
 dependencies = [
  "use-point",
 ]
+
+[[package]]
+name = "use-wythoff"
+version = "0.0.6"
 
 [[package]]
 name = "wasip2"

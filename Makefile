@@ -13,11 +13,16 @@ PUBLISH_CRATES := \
 	use-line \
 	use-segment \
 	use-circle \
+	use-sphere \
+	use-hypersphere \
+	use-torus \
 	use-triangle \
 	use-containment \
 	use-congruence \
 	use-similarity \
 	use-intersection \
+	use-dihedral \
+	use-inversion \
 	use-ray \
 	use-plane \
 	use-hyperplane \
@@ -36,11 +41,24 @@ PUBLISH_CRATES := \
 	use-orthotope \
 	use-polytope \
 	use-polyhedron \
+	use-schlafli \
 	use-regular-polytope \
+	use-uniform-polytope \
+	use-archimedean \
+	use-catalan-solid \
+	use-johnson-solid \
+	use-wythoff \
+	use-coxeter \
+	use-incidence \
+	use-projective \
+	use-configuration \
+	use-duality \
 	use-surface \
+	use-manifold \
 	use-mesh \
 	use-face \
 	use-cell \
+	use-complex \
 	use-hull \
 	use-triangulation \
 	use-tessellation \
