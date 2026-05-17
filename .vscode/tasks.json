@@ -1,0 +1,145 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cargo: fmt (check)",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "xfmt"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "cargo: check workspace",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "xcheck"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "cargo: examples",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "xexamples"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "cargo: clippy",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "xlint"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "cargo: test all-features",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "xtest"
+            ],
+            "group": "test",
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "cargo: test no-default-features",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "xtest-minimal"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "cargo: build workspace",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "xbuild"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "cargo: doc",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "xdoc"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "cargo: deny",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "xdeny"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "cargo: audit",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "xaudit"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "cargo: publish dry-run workspace",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-Command",
+                "$crates = @('use-geometry-core', 'use-coordinate', 'use-dimension', 'use-angle', 'use-point', 'use-distance', 'use-orientation', 'use-bounds', 'use-line', 'use-segment', 'use-circle', 'use-triangle', 'use-containment', 'use-congruence', 'use-similarity', 'use-intersection', 'use-ray', 'use-plane', 'use-hyperplane', 'use-transform', 'use-affine', 'use-projection', 'use-reflection', 'use-curve', 'use-conic', 'use-polyline', 'use-bezier', 'use-spline', 'use-rectangle', 'use-polygon', 'use-simplex', 'use-orthotope', 'use-polytope', 'use-polyhedron', 'use-regular-polytope', 'use-surface', 'use-mesh', 'use-face', 'use-cell', 'use-hull', 'use-triangulation', 'use-tessellation', 'use-voronoi', 'use-delaunay', 'use-folding', 'use-crease', 'use-origami', 'use-linkage', 'use-unfolding', 'use-rigid-folding', 'use-polyhedral-net', 'use-geometry'); foreach ($crate in $crates) { cargo publish --dry-run --allow-dirty -p $crate; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE } }"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "cargo: verify workspace",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "cargo: fmt (check)",
+                "cargo: check workspace",
+                "cargo: clippy",
+                "cargo: test all-features",
+                "cargo: build workspace"
+            ]
+        },
+        {
+            "label": "cargo: release readiness",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "cargo: verify workspace",
+                "cargo: examples",
+                "cargo: test no-default-features",
+                "cargo: publish dry-run workspace"
+            ]
+        }
+    ]
+}

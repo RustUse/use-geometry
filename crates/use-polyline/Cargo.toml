@@ -1,0 +1,25 @@
+[package]
+name = "use-polyline"
+description = "Polyline primitives for the RustUse geometry workspace"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-polyline"
+keywords = ["geometry", "polyline", "path"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+use-distance.workspace = true
+use-point.workspace = true
+
+[lints]
+workspace = true

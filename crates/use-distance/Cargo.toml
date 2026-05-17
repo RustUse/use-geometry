@@ -1,0 +1,24 @@
+[package]
+name = "use-distance"
+description = "Small point-to-point distance helpers for RustUse geometry"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-distance"
+keywords = ["geometry", "distance", "point", "2d"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+use-point.workspace = true
+
+[lints]
+workspace = true

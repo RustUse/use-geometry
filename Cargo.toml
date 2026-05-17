@@ -1,0 +1,182 @@
+[workspace]
+members = [
+	"crates/use-geometry",
+	"crates/use-affine",
+	"crates/use-angle",
+	"crates/use-bezier",
+	"crates/use-bounds",
+	"crates/use-cell",
+	"crates/use-circle",
+	"crates/use-congruence",
+	"crates/use-conic",
+	"crates/use-containment",
+	"crates/use-coordinate",
+	"crates/use-crease",
+	"crates/use-curve",
+	"crates/use-delaunay",
+	"crates/use-dimension",
+	"crates/use-distance",
+	"crates/use-face",
+	"crates/use-folding",
+	"crates/use-geometry-core",
+	"crates/use-hull",
+	"crates/use-hyperplane",
+	"crates/use-intersection",
+	"crates/use-line",
+	"crates/use-linkage",
+	"crates/use-mesh",
+	"crates/use-orientation",
+	"crates/use-origami",
+	"crates/use-orthotope",
+	"crates/use-plane",
+	"crates/use-point",
+	"crates/use-polygon",
+	"crates/use-polyhedral-net",
+	"crates/use-polyhedron",
+	"crates/use-polyline",
+	"crates/use-polytope",
+	"crates/use-projection",
+	"crates/use-ray",
+	"crates/use-rectangle",
+	"crates/use-reflection",
+	"crates/use-regular-polytope",
+	"crates/use-rigid-folding",
+	"crates/use-segment",
+	"crates/use-similarity",
+	"crates/use-simplex",
+	"crates/use-spline",
+	"crates/use-surface",
+	"crates/use-tessellation",
+	"crates/use-transform",
+	"crates/use-triangle",
+	"crates/use-triangulation",
+	"crates/use-unfolding",
+	"crates/use-voronoi",
+]
+resolver = "2"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/RustUse/use-geometry"
+rust-version = "1.95.0"
+version = "0.0.6"
+
+[workspace.dependencies]
+proptest = { version = "1.11.0", default-features = false, features = ["std"] }
+use-affine = { version = "0.0.6", path = "crates/use-affine" }
+use-angle = { version = "0.0.6", path = "crates/use-angle" }
+use-bezier = { version = "0.0.6", path = "crates/use-bezier" }
+use-bounds = { version = "0.0.6", path = "crates/use-bounds" }
+use-cell = { version = "0.0.6", path = "crates/use-cell" }
+use-circle = { version = "0.0.6", path = "crates/use-circle" }
+use-congruence = { version = "0.0.6", path = "crates/use-congruence" }
+use-conic = { version = "0.0.6", path = "crates/use-conic" }
+use-containment = { version = "0.0.6", path = "crates/use-containment" }
+use-coordinate = { version = "0.0.6", path = "crates/use-coordinate" }
+use-crease = { version = "0.0.6", path = "crates/use-crease" }
+use-curve = { version = "0.0.6", path = "crates/use-curve" }
+use-delaunay = { version = "0.0.6", path = "crates/use-delaunay" }
+use-dimension = { version = "0.0.6", path = "crates/use-dimension" }
+use-distance = { version = "0.0.6", path = "crates/use-distance" }
+use-face = { version = "0.0.6", path = "crates/use-face" }
+use-folding = { version = "0.0.6", path = "crates/use-folding" }
+use-geometry-core = { version = "0.0.6", path = "crates/use-geometry-core" }
+use-hull = { version = "0.0.6", path = "crates/use-hull" }
+use-hyperplane = { version = "0.0.6", path = "crates/use-hyperplane" }
+use-intersection = { version = "0.0.6", path = "crates/use-intersection" }
+use-line = { version = "0.0.6", path = "crates/use-line" }
+use-linkage = { version = "0.0.6", path = "crates/use-linkage" }
+use-mesh = { version = "0.0.6", path = "crates/use-mesh" }
+use-orientation = { version = "0.0.6", path = "crates/use-orientation" }
+use-origami = { version = "0.0.6", path = "crates/use-origami" }
+use-orthotope = { version = "0.0.6", path = "crates/use-orthotope" }
+use-plane = { version = "0.0.6", path = "crates/use-plane" }
+use-point = { version = "0.0.6", path = "crates/use-point" }
+use-polygon = { version = "0.0.6", path = "crates/use-polygon" }
+use-polyhedral-net = { version = "0.0.6", path = "crates/use-polyhedral-net" }
+use-polyhedron = { version = "0.0.6", path = "crates/use-polyhedron" }
+use-polyline = { version = "0.0.6", path = "crates/use-polyline" }
+use-polytope = { version = "0.0.6", path = "crates/use-polytope" }
+use-projection = { version = "0.0.6", path = "crates/use-projection" }
+use-ray = { version = "0.0.6", path = "crates/use-ray" }
+use-rectangle = { version = "0.0.6", path = "crates/use-rectangle" }
+use-reflection = { version = "0.0.6", path = "crates/use-reflection" }
+use-regular-polytope = { version = "0.0.6", path = "crates/use-regular-polytope" }
+use-rigid-folding = { version = "0.0.6", path = "crates/use-rigid-folding" }
+use-segment = { version = "0.0.6", path = "crates/use-segment" }
+use-similarity = { version = "0.0.6", path = "crates/use-similarity" }
+use-simplex = { version = "0.0.6", path = "crates/use-simplex" }
+use-spline = { version = "0.0.6", path = "crates/use-spline" }
+use-surface = { version = "0.0.6", path = "crates/use-surface" }
+use-tessellation = { version = "0.0.6", path = "crates/use-tessellation" }
+use-transform = { version = "0.0.6", path = "crates/use-transform" }
+use-triangle = { version = "0.0.6", path = "crates/use-triangle" }
+use-triangulation = { version = "0.0.6", path = "crates/use-triangulation" }
+use-unfolding = { version = "0.0.6", path = "crates/use-unfolding" }
+use-vector = { version = "0.0.6", path = "../use-math/crates/use-vector" }
+use-voronoi = { version = "0.0.6", path = "crates/use-voronoi" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+	"use-geometry-core",
+	"use-coordinate",
+	"use-dimension",
+	"use-angle",
+	"use-point",
+	"use-distance",
+	"use-orientation",
+	"use-bounds",
+	"use-line",
+	"use-segment",
+	"use-circle",
+	"use-triangle",
+	"use-containment",
+	"use-congruence",
+	"use-similarity",
+	"use-intersection",
+	"use-ray",
+	"use-plane",
+	"use-hyperplane",
+	"use-transform",
+	"use-affine",
+	"use-projection",
+	"use-reflection",
+	"use-curve",
+	"use-conic",
+	"use-polyline",
+	"use-bezier",
+	"use-spline",
+	"use-rectangle",
+	"use-polygon",
+	"use-simplex",
+	"use-orthotope",
+	"use-polytope",
+	"use-polyhedron",
+	"use-regular-polytope",
+	"use-surface",
+	"use-mesh",
+	"use-face",
+	"use-cell",
+	"use-hull",
+	"use-triangulation",
+	"use-tessellation",
+	"use-voronoi",
+	"use-delaunay",
+	"use-folding",
+	"use-crease",
+	"use-origami",
+	"use-linkage",
+	"use-unfolding",
+	"use-rigid-folding",
+	"use-polyhedral-net",
+	"use-geometry",
+]

@@ -1,0 +1,21 @@
+[package]
+name = "use-angle"
+description = "Angle primitives for the RustUse geometry workspace"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-angle"
+keywords = ["geometry", "angle", "radians", "degrees"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

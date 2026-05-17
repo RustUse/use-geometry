@@ -1,0 +1,77 @@
+[package]
+name = "use-geometry"
+description = "Facade crate for the RustUse geometry workspace."
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-geometry"
+keywords = ["geometry", "facade", "2d", "shapes", "rustuse"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+use-affine.workspace = true
+use-angle.workspace = true
+use-bezier.workspace = true
+use-bounds.workspace = true
+use-cell.workspace = true
+use-circle.workspace = true
+use-congruence.workspace = true
+use-conic.workspace = true
+use-containment.workspace = true
+use-coordinate.workspace = true
+use-crease.workspace = true
+use-curve.workspace = true
+use-delaunay.workspace = true
+use-dimension.workspace = true
+use-distance.workspace = true
+use-face.workspace = true
+use-folding.workspace = true
+use-geometry-core.workspace = true
+use-hull.workspace = true
+use-hyperplane.workspace = true
+use-intersection.workspace = true
+use-line.workspace = true
+use-linkage.workspace = true
+use-mesh.workspace = true
+use-orientation.workspace = true
+use-origami.workspace = true
+use-orthotope.workspace = true
+use-plane.workspace = true
+use-point.workspace = true
+use-polygon.workspace = true
+use-polyhedral-net.workspace = true
+use-polyhedron.workspace = true
+use-polyline.workspace = true
+use-polytope.workspace = true
+use-projection.workspace = true
+use-ray.workspace = true
+use-rectangle.workspace = true
+use-reflection.workspace = true
+use-regular-polytope.workspace = true
+use-rigid-folding.workspace = true
+use-segment.workspace = true
+use-similarity.workspace = true
+use-simplex.workspace = true
+use-spline.workspace = true
+use-surface.workspace = true
+use-tessellation.workspace = true
+use-transform.workspace = true
+use-triangle.workspace = true
+use-triangulation.workspace = true
+use-unfolding.workspace = true
+use-voronoi.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,21 @@
+[package]
+name = "use-polyhedral-net"
+description = "Polyhedral net primitives for the RustUse geometry workspace"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-polyhedral-net"
+keywords = ["geometry", "polyhedral-net", "unfolding"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

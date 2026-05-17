@@ -1,0 +1,28 @@
+[package]
+name = "use-triangle"
+description = "Small triangle primitives for RustUse geometry"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-triangle"
+keywords = ["geometry", "triangle", "area", "2d"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+use-bounds.workspace = true
+use-distance.workspace = true
+use-geometry-core.workspace = true
+use-orientation.workspace = true
+use-point.workspace = true
+
+[lints]
+workspace = true

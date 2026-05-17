@@ -1,0 +1,24 @@
+[package]
+name = "use-voronoi"
+description = "Voronoi diagram primitives for the RustUse geometry workspace"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-voronoi"
+keywords = ["geometry", "voronoi", "diagram"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+use-point.workspace = true
+
+[lints]
+workspace = true

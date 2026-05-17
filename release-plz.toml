@@ -1,0 +1,336 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-geometry-core"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-coordinate"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-dimension"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-angle"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-point"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-distance"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-orientation"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-bounds"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-line"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-segment"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-circle"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-triangle"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-containment"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-congruence"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-similarity"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-intersection"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-ray"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-plane"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-hyperplane"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-transform"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-affine"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-projection"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-reflection"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-curve"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-conic"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-polyline"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-bezier"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-spline"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-rectangle"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-polygon"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-simplex"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-orthotope"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-polytope"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-polyhedron"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-regular-polytope"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-surface"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-mesh"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-face"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-cell"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-hull"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-triangulation"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-tessellation"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-voronoi"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-delaunay"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-folding"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-crease"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-origami"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-linkage"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-unfolding"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-rigid-folding"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-polyhedral-net"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]]
+name = "use-geometry"
+release = true
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+  { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+  { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+  { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+  { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+  { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+  { footer = "^changelog: ?ignore$", skip = true },
+  { message = "^.*", group = "Changed" },
+]

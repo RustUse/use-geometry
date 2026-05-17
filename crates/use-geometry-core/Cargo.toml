@@ -1,0 +1,21 @@
+[package]
+name = "use-geometry-core"
+description = "Shared low-level geometry error types for RustUse"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-geometry-core"
+keywords = ["geometry", "errors", "validation", "rustuse"]
+categories = ["mathematics", "rust-patterns"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

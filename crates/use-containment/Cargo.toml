@@ -1,0 +1,21 @@
+[package]
+name = "use-containment"
+description = "Containment traits and classifications for RustUse geometry"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-containment"
+keywords = ["geometry", "containment", "inside", "rustuse"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

@@ -1,0 +1,27 @@
+[package]
+name = "use-segment"
+description = "Small 2D segment primitives for RustUse geometry"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-segment"
+keywords = ["geometry", "segment", "2d", "line"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+use-bounds.workspace = true
+use-geometry-core.workspace = true
+use-point.workspace = true
+use-vector.workspace = true
+
+[lints]
+workspace = true

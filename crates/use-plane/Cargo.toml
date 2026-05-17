@@ -1,0 +1,25 @@
+[package]
+name = "use-plane"
+description = "Plane primitives for the RustUse geometry workspace"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-plane"
+keywords = ["geometry", "plane", "3d", "rustuse"]
+categories = ["mathematics", "science"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+use-geometry-core.workspace = true
+use-vector.workspace = true
+
+[lints]
+workspace = true
