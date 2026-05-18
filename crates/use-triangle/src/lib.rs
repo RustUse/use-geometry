@@ -2,8 +2,8 @@
 #![doc = include_str!("../README.md")]
 
 use use_bounds::Aabb2;
-use use_distance::distance_2d;
 use use_coordinate::GeometryError;
+use use_distance::distance_2d;
 use use_orientation::{Orientation2, orientation_2d, signed_twice_area_2d};
 use use_point::Point2;
 

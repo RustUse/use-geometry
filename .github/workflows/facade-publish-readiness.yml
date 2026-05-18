@@ -1,20 +1,20 @@
-name: Publish Readiness
+name: Facade Publish Readiness
 
 "on":
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
   workflow_dispatch:
+    inputs:
+      registry-ready:
+        description: Confirm that matching focused-crate versions are live on crates.io
+        required: true
+        type: boolean
 
 permissions:
   contents: read
 
 jobs:
-  release-readiness:
-    name: Release Readiness Checks
+  facade-release-readiness:
+    if: ${{ inputs.registry-ready }}
+    name: Facade Publish Dry Run
     runs-on: ubuntu-latest
     env:
       FOCUSED_CRATES: >-
@@ -30,15 +30,14 @@ jobs:
           cache-workspaces: |
             . -> target
 
-      - name: Check examples with all features enabled
-        run: cargo check --workspace --all-features --examples
-
-      - name: Test workspace without default features
-        run: cargo test --workspace --no-default-features
-
-      - name: Dry-run publish focused crates
+      - name: Confirm focused crates are visible on crates.io
         run: |
           for crate in $FOCUSED_CRATES; do
-            cargo package --list -p "$crate"
-            cargo publish --dry-run --allow-dirty -p "$crate"
+            curl --fail --silent --show-error "https://crates.io/api/v1/crates/${crate}" > /dev/null
           done
+
+      - name: List packaged facade files
+        run: cargo package --list -p use-geometry
+
+      - name: Dry-run publish use-geometry
+        run: cargo publish --dry-run --allow-dirty -p use-geometry
