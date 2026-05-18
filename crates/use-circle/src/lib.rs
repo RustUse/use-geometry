@@ -4,7 +4,7 @@
 use core::f64::consts::PI;
 
 use use_bounds::Aabb2;
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 use use_point::Point2;
 
 /// A circle in 2D Euclidean space.
@@ -110,7 +110,7 @@ mod tests {
     use core::f64::consts::PI;
 
     use super::Circle;
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
     use use_point::Point2;
 
     fn approx_eq(left: f64, right: f64) -> bool {

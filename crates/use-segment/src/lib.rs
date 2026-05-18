@@ -2,7 +2,7 @@
 #![doc = include_str!("../README.md")]
 
 use use_bounds::Aabb2;
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 use use_point::Point2;
 use use_vector::Vector2;
 
@@ -108,7 +108,7 @@ impl Segment2 {
 #[cfg(test)]
 mod tests {
     use super::Segment2;
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
     use use_point::Point2;
     use use_vector::Vector2;
 

@@ -3,7 +3,7 @@
 
 use core::ops::{Add, Sub};
 
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 use use_vector::Vector2;
 
 /// A 2D point represented with `f64` coordinates.
@@ -136,7 +136,7 @@ impl Sub<Self> for Point2 {
 #[cfg(test)]
 mod tests {
     use super::Point2;
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
     use use_vector::Vector2;
 
     fn approx_eq(left: f64, right: f64) -> bool {

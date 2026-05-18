@@ -42,7 +42,6 @@ use-distance.workspace = true
 use-duality.workspace = true
 use-face.workspace = true
 use-folding.workspace = true
-use-geometry-core.workspace = true
 use-hull.workspace = true
 use-hyperplane.workspace = true
 use-hypersphere.workspace = true

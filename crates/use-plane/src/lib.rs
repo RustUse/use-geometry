@@ -1,7 +1,7 @@
 #![forbid(unsafe_code)]
 #![doc = include_str!("../README.md")]
 
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 use use_vector::Vector3;
 
 fn validate_vector3(name: &'static str, vector: Vector3) -> Result<Vector3, GeometryError> {
@@ -65,7 +65,7 @@ impl Plane3 {
 #[cfg(test)]
 mod tests {
     use super::Plane3;
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
     use use_vector::Vector3;
 
     #[test]

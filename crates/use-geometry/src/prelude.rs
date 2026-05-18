@@ -24,7 +24,6 @@ pub use use_distance::*;
 pub use use_duality::*;
 pub use use_face::*;
 pub use use_folding::*;
-pub use use_geometry_core::*;
 pub use use_hull::*;
 pub use use_hyperplane::*;
 pub use use_hypersphere::*;

@@ -1,7 +1,7 @@
 #![forbid(unsafe_code)]
 #![doc = include_str!("../README.md")]
 
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 use use_point::Point2;
 
 /// A planar geometric inversion represented by center and radius.
@@ -53,7 +53,7 @@ impl Inversion {
 #[cfg(test)]
 mod tests {
     use super::Inversion;
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
     use use_point::Point2;
 
     #[test]

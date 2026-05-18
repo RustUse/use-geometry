@@ -1,7 +1,7 @@
 #![forbid(unsafe_code)]
 #![doc = include_str!("../README.md")]
 
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 
 /// An n-dimensional hyperplane represented by `coefficients.dot(point) + offset = 0`.
 #[derive(Debug, Clone, PartialEq)]
@@ -85,7 +85,7 @@ impl Hyperplane {
 #[cfg(test)]
 mod tests {
     use super::Hyperplane;
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
 
     #[test]
     fn evaluates_hyperplanes() {

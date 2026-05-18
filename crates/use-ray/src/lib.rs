@@ -1,7 +1,7 @@
 #![forbid(unsafe_code)]
 #![doc = include_str!("../README.md")]
 
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 use use_point::Point2;
 use use_vector::Vector2;
 
@@ -77,7 +77,7 @@ impl Ray2 {
 #[cfg(test)]
 mod tests {
     use super::Ray2;
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
     use use_point::Point2;
     use use_vector::Vector2;
 

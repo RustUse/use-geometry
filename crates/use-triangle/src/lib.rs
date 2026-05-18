@@ -3,7 +3,7 @@
 
 use use_bounds::Aabb2;
 use use_distance::distance_2d;
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 use use_orientation::{Orientation2, orientation_2d, signed_twice_area_2d};
 use use_point::Point2;
 
@@ -158,7 +158,7 @@ pub fn triangle_area(a: Point2, b: Point2, c: Point2) -> f64 {
 #[cfg(test)]
 mod tests {
     use super::{Triangle, triangle_area, triangle_twice_area, triangle_twice_signed_area};
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
     use use_orientation::Orientation2;
     use use_point::Point2;
 

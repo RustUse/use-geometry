@@ -2,7 +2,6 @@
 
 SBOM_CRATE := use-geometry
 PUBLISH_CRATES := \
-	use-geometry-core \
 	use-coordinate \
 	use-dimension \
 	use-angle \

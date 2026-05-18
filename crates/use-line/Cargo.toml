@@ -18,7 +18,7 @@ categories = ["mathematics", "science"]
 all-features = true
 
 [dependencies]
-use-geometry-core.workspace = true
+use-coordinate.workspace = true
 use-orientation.workspace = true
 use-point.workspace = true
 use-vector.workspace = true

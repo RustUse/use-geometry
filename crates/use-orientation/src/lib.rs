@@ -1,7 +1,7 @@
 #![forbid(unsafe_code)]
 #![doc = include_str!("../README.md")]
 
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 use use_point::Point2;
 
 /// The winding order of three 2D points.
@@ -110,7 +110,7 @@ mod tests {
         Orientation2, orientation_2d, orientation_2d_with_tolerance, signed_twice_area_2d,
         try_orientation_2d, try_orientation_2d_with_tolerance,
     };
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
     use use_point::Point2;
 
     fn approx_eq(left: f64, right: f64) -> bool {

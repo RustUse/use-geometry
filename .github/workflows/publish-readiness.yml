@@ -1,115 +1,114 @@
 name: Publish Readiness
 
 on:
-    pull_request:
-        branches:
-            - main
-    push:
-        branches:
-            - main
-    workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
-    contents: read
+  contents: read
 
 jobs:
-    release-readiness:
-        name: Release Readiness Checks
-        runs-on: ubuntu-latest
-        steps:
-            - name: Check out repository
-              uses: actions/checkout@v4
+  release-readiness:
+    name: Release Readiness Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-            - name: Install stable Rust toolchain
-              uses: actions-rust-lang/setup-rust-toolchain@v1
-              with:
-                  rustflags: ""
-                  cache-workspaces: |
-                      . -> target
+      - name: Install stable Rust toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          rustflags: ""
+          cache-workspaces: |
+            . -> target
 
-            - name: Check examples with all features enabled
-              run: cargo check --workspace --all-features --examples
+      - name: Check examples with all features enabled
+        run: cargo check --workspace --all-features --examples
 
-            - name: Test workspace without default features
-              run: cargo test --workspace --no-default-features
+      - name: Test workspace without default features
+        run: cargo test --workspace --no-default-features
 
-            - name: Dry-run publish workspace crates
-              run: |
-                  set -euo pipefail
-                  crates=(
-                    use-geometry-core
-                    use-coordinate
-                    use-dimension
-                    use-angle
-                    use-point
-                    use-distance
-                    use-orientation
-                    use-bounds
-                    use-line
-                    use-segment
-                    use-circle
-                    use-sphere
-                    use-hypersphere
-                    use-torus
-                    use-triangle
-                    use-containment
-                    use-congruence
-                    use-similarity
-                    use-intersection
-                    use-dihedral
-                    use-inversion
-                    use-ray
-                    use-plane
-                    use-hyperplane
-                    use-transform
-                    use-affine
-                    use-projection
-                    use-reflection
-                    use-curve
-                    use-conic
-                    use-polyline
-                    use-bezier
-                    use-spline
-                    use-rectangle
-                    use-polygon
-                    use-simplex
-                    use-orthotope
-                    use-polytope
-                    use-polyhedron
-                    use-schlafli
-                    use-regular-polytope
-                    use-uniform-polytope
-                    use-archimedean
-                    use-catalan-solid
-                    use-johnson-solid
-                    use-wythoff
-                    use-coxeter
-                    use-incidence
-                    use-projective
-                    use-configuration
-                    use-duality
-                    use-surface
-                    use-manifold
-                    use-mesh
-                    use-face
-                    use-cell
-                    use-complex
-                    use-hull
-                    use-triangulation
-                    use-tessellation
-                    use-voronoi
-                    use-delaunay
-                    use-folding
-                    use-crease
-                    use-origami
-                    use-linkage
-                    use-unfolding
-                    use-rigid-folding
-                    use-polyhedral-net
-                    use-geometry
-                  )
+      - name: Dry-run publish workspace crates
+        run: |
+          set -euo pipefail
+          crates=(
+            use-coordinate
+            use-dimension
+            use-angle
+            use-point
+            use-distance
+            use-orientation
+            use-bounds
+            use-line
+            use-segment
+            use-circle
+            use-sphere
+            use-hypersphere
+            use-torus
+            use-triangle
+            use-containment
+            use-congruence
+            use-similarity
+            use-intersection
+            use-dihedral
+            use-inversion
+            use-ray
+            use-plane
+            use-hyperplane
+            use-transform
+            use-affine
+            use-projection
+            use-reflection
+            use-curve
+            use-conic
+            use-polyline
+            use-bezier
+            use-spline
+            use-rectangle
+            use-polygon
+            use-simplex
+            use-orthotope
+            use-polytope
+            use-polyhedron
+            use-schlafli
+            use-regular-polytope
+            use-uniform-polytope
+            use-archimedean
+            use-catalan-solid
+            use-johnson-solid
+            use-wythoff
+            use-coxeter
+            use-incidence
+            use-projective
+            use-configuration
+            use-duality
+            use-surface
+            use-manifold
+            use-mesh
+            use-face
+            use-cell
+            use-complex
+            use-hull
+            use-triangulation
+            use-tessellation
+            use-voronoi
+            use-delaunay
+            use-folding
+            use-crease
+            use-origami
+            use-linkage
+            use-unfolding
+            use-rigid-folding
+            use-polyhedral-net
+            use-geometry
+          )
 
-                  for crate in "${crates[@]}"; do
-                    cargo package --list -p "$crate"
-                    cargo publish --dry-run --allow-dirty -p "$crate"
-                  done
+          for crate in "${crates[@]}"; do
+            cargo package --list -p "$crate"
+            cargo publish --dry-run --allow-dirty -p "$crate"
+          done

@@ -17,5 +17,5 @@ let triangle = Triangle::try_new(a, b, c)?;
 assert_eq!(triangle.orientation(), Orientation2::CounterClockwise);
 assert_eq!(triangle.area(), triangle_area(a, b, c));
 assert_eq!(triangle.perimeter(), 12.0);
-# Ok::<(), use_geometry_core::GeometryError>(())
+# Ok::<(), use_coordinate::GeometryError>(())
 ```

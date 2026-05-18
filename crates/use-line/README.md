@@ -13,5 +13,5 @@ let line = Line2::try_from_point_direction(Point2::new(1.0, 2.0), Vector2::new(3
 
 assert_eq!(line.b(), Point2::new(4.0, 6.0));
 assert!(line.contains_point(Point2::new(7.0, 10.0)));
-# Ok::<(), use_geometry_core::GeometryError>(())
+# Ok::<(), use_coordinate::GeometryError>(())
 ```

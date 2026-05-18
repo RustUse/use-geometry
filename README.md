@@ -15,7 +15,7 @@ object crates.
 
 | Group                                              | Crates                                                                                                                                                |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Foundations                                        | `use-geometry-core`, `use-coordinate`, `use-dimension`, `use-angle`, `use-point`                                                                      |
+| Foundations                                        | `use-coordinate`, `use-dimension`, `use-angle`, `use-point`                                                                                           |
 | Affine and Euclidean primitives                    | `use-bounds`, `use-line`, `use-ray`, `use-segment`, `use-plane`, `use-hyperplane`, `use-circle`, `use-sphere`, `use-hypersphere`, `use-torus`         |
 | Transformations                                    | `use-transform`, `use-affine`, `use-projection`, `use-reflection`, `use-inversion`                                                                    |
 | Metric and relational geometry                     | `use-distance`, `use-orientation`, `use-intersection`, `use-containment`, `use-congruence`, `use-similarity`, `use-dihedral`                          |

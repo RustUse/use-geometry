@@ -1,7 +1,7 @@
 #![forbid(unsafe_code)]
 #![doc = include_str!("../README.md")]
 
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 use use_orientation::signed_twice_area_2d;
 use use_point::Point2;
 use use_vector::Vector2;
@@ -190,7 +190,7 @@ pub fn try_slope(left: Point2, right: Point2) -> Result<Option<f64>, GeometryErr
 #[cfg(test)]
 mod tests {
     use super::{Line2, slope, try_slope};
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
     use use_point::Point2;
     use use_vector::Vector2;
 

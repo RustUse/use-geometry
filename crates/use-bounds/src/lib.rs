@@ -1,7 +1,7 @@
 #![forbid(unsafe_code)]
 #![doc = include_str!("../README.md")]
 
-use use_geometry_core::GeometryError;
+use use_coordinate::GeometryError;
 use use_point::Point2;
 
 /// An axis-aligned bounding box represented by inclusive minimum and maximum corners.
@@ -154,7 +154,7 @@ pub const fn aabb_from_points(a: Point2, b: Point2) -> Aabb2 {
 #[cfg(test)]
 mod tests {
     use super::{Aabb2, aabb_from_points};
-    use use_geometry_core::GeometryError;
+    use use_coordinate::GeometryError;
     use use_point::Point2;
 
     fn approx_eq(left: f64, right: f64) -> bool {

@@ -13,5 +13,5 @@ let hyperplane = Hyperplane::try_new(vec![1.0, 0.0, 0.0], -2.0)?;
 
 assert_eq!(hyperplane.dimension(), 3);
 assert_eq!(hyperplane.evaluate(&[2.0, 4.0, 5.0]), Some(0.0));
-# Ok::<(), use_geometry_core::GeometryError>(())
+# Ok::<(), use_coordinate::GeometryError>(())
 ```

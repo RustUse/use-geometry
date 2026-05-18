@@ -6,12 +6,6 @@ pr_labels = ["release"]
 max_analyze_commits = 2000
 
 [[package]]
-name = "use-geometry-core"
-release = true
-changelog_update = true
-changelog_path = "./CHANGELOG.md"
-
-[[package]]
 name = "use-coordinate"
 release = true
 changelog_update = true

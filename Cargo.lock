@@ -188,7 +188,7 @@ dependencies = [
 name = "use-bounds"
 version = "0.0.6"
 dependencies = [
- "use-geometry-core",
+ "use-coordinate",
  "use-point",
 ]
 
@@ -208,7 +208,7 @@ name = "use-circle"
 version = "0.0.6"
 dependencies = [
  "use-bounds",
- "use-geometry-core",
+ "use-coordinate",
  "use-point",
 ]
 
@@ -330,7 +330,6 @@ dependencies = [
  "use-duality",
  "use-face",
  "use-folding",
- "use-geometry-core",
  "use-hull",
  "use-hyperplane",
  "use-hypersphere",
@@ -378,10 +377,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "use-geometry-core"
-version = "0.0.6"
-
-[[package]]
 name = "use-hull"
 version = "0.0.6"
 dependencies = [
@@ -392,7 +387,7 @@ dependencies = [
 name = "use-hyperplane"
 version = "0.0.6"
 dependencies = [
- "use-geometry-core",
+ "use-coordinate",
 ]
 
 [[package]]
@@ -414,7 +409,7 @@ dependencies = [
 name = "use-inversion"
 version = "0.0.6"
 dependencies = [
- "use-geometry-core",
+ "use-coordinate",
  "use-point",
 ]
 
@@ -426,7 +421,7 @@ version = "0.0.6"
 name = "use-line"
 version = "0.0.6"
 dependencies = [
- "use-geometry-core",
+ "use-coordinate",
  "use-orientation",
  "use-point",
  "use-vector",
@@ -448,7 +443,7 @@ version = "0.0.6"
 name = "use-orientation"
 version = "0.0.6"
 dependencies = [
- "use-geometry-core",
+ "use-coordinate",
  "use-point",
 ]
 
@@ -464,7 +459,7 @@ version = "0.0.6"
 name = "use-plane"
 version = "0.0.6"
 dependencies = [
- "use-geometry-core",
+ "use-coordinate",
  "use-vector",
 ]
 
@@ -472,7 +467,7 @@ dependencies = [
 name = "use-point"
 version = "0.0.6"
 dependencies = [
- "use-geometry-core",
+ "use-coordinate",
  "use-vector",
 ]
 
@@ -521,7 +516,7 @@ version = "0.0.6"
 name = "use-ray"
 version = "0.0.6"
 dependencies = [
- "use-geometry-core",
+ "use-coordinate",
  "use-point",
  "use-vector",
 ]
@@ -564,7 +559,7 @@ name = "use-segment"
 version = "0.0.6"
 dependencies = [
  "use-bounds",
- "use-geometry-core",
+ "use-coordinate",
  "use-point",
  "use-vector",
 ]
@@ -616,8 +611,8 @@ name = "use-triangle"
 version = "0.0.6"
 dependencies = [
  "use-bounds",
+ "use-coordinate",
  "use-distance",
- "use-geometry-core",
  "use-orientation",
  "use-point",
 ]

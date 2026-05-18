@@ -16,5 +16,5 @@ let end = start.translate(Vector2::new(3.0, 4.0));
 
 assert_eq!(end, Point2::new(4.0, 6.0));
 assert_eq!(end - start, Vector2::new(3.0, 4.0));
-# Ok::<(), use_geometry_core::GeometryError>(())
+# Ok::<(), use_coordinate::GeometryError>(())
 ```

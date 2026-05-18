@@ -1,7 +1,6 @@
 [workspace]
 members = [
 	"crates/use-geometry",
-	"crates/use-geometry-core",
 	"crates/use-coordinate",
 	"crates/use-dimension",
 	"crates/use-angle",
@@ -109,7 +108,6 @@ use-distance = { version = "0.0.6", path = "crates/use-distance" }
 use-duality = { version = "0.0.6", path = "crates/use-duality" }
 use-face = { version = "0.0.6", path = "crates/use-face" }
 use-folding = { version = "0.0.6", path = "crates/use-folding" }
-use-geometry-core = { version = "0.0.6", path = "crates/use-geometry-core" }
 use-hull = { version = "0.0.6", path = "crates/use-hull" }
 use-hyperplane = { version = "0.0.6", path = "crates/use-hyperplane" }
 use-hypersphere = { version = "0.0.6", path = "crates/use-hypersphere" }
@@ -163,7 +161,6 @@ unsafe_code = "forbid"
 publish = false
 versioning = "lockstep-0.x"
 first-publish-candidates = [
-	"use-geometry-core",
 	"use-coordinate",
 	"use-dimension",
 	"use-angle",

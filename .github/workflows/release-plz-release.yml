@@ -52,7 +52,6 @@ jobs:
               run: |
                   set -euo pipefail
                   crates=(
-                    use-geometry-core
                     use-coordinate
                     use-dimension
                     use-angle

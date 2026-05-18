@@ -19,7 +19,7 @@ all-features = true
 
 [dependencies]
 use-bounds.workspace = true
-use-geometry-core.workspace = true
+use-coordinate.workspace = true
 use-point.workspace = true
 use-vector.workspace = true
 
