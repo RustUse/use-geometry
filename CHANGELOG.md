@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## [0.2.0](https://github.com/RustUse/use-geometry/compare/use-geometry-v0.1.0...use-geometry-v0.2.0) - 2026-05-19
+
+### Changed
+
+- Released the `use-geometry` facade at `0.2.0` with updated dependency bounds for the geometry crates that now consume `use-vector 0.0.7`.
+- Released `use-point`, `use-plane`, `use-orientation`, and `use-ray` at `0.1.0`, and `use-line` at `0.2.1`, preserving the RustUse-wide policy that crates stay below `0.3.0` until production-readiness is intended.
+
 ## [0.1.0](https://github.com/RustUse/use-geometry/compare/use-geometry-v0.0.7...use-geometry-v0.1.0) - 2026-05-19
 
 ### Changed
