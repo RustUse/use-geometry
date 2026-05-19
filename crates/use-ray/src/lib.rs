@@ -6,19 +6,19 @@ use use_point::Point2;
 use use_vector::Vector2;
 
 fn validate_direction(direction: Vector2) -> Result<Vector2, GeometryError> {
-    if !direction.x.is_finite() {
+    if !direction.x().is_finite() {
         return Err(GeometryError::non_finite_component(
             "Vector2",
             "x",
-            direction.x,
+            direction.x(),
         ));
     }
 
-    if !direction.y.is_finite() {
+    if !direction.y().is_finite() {
         return Err(GeometryError::non_finite_component(
             "Vector2",
             "y",
-            direction.y,
+            direction.y(),
         ));
     }
 

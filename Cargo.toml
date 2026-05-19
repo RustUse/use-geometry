@@ -150,7 +150,7 @@ use-triangle = { version = "0.0.6", path = "crates/use-triangle" }
 use-triangulation = { version = "0.0.6", path = "crates/use-triangulation" }
 use-unfolding = { version = "0.0.6", path = "crates/use-unfolding" }
 use-uniform-polytope = { version = "0.0.6", path = "crates/use-uniform-polytope" }
-use-vector = { version = "0.0.6", path = "../use-math/crates/use-vector" }
+use-vector = { version = "0.0.7", path = "../use-math/crates/use-vector" }
 use-voronoi = { version = "0.0.6", path = "crates/use-voronoi" }
 use-wythoff = { version = "0.0.6", path = "crates/use-wythoff" }
 

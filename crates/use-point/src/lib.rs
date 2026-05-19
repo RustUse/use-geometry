@@ -105,7 +105,7 @@ impl Point2 {
     /// Returns a point translated by a vector.
     #[must_use]
     pub const fn translate(self, vector: Vector2) -> Self {
-        Self::new(self.x + vector.x, self.y + vector.y)
+        Self::new(self.x + vector.x(), self.y + vector.y())
     }
 }
 
@@ -113,7 +113,7 @@ impl Add<Vector2> for Point2 {
     type Output = Self;
 
     fn add(self, rhs: Vector2) -> Self::Output {
-        Self::new(self.x + rhs.x, self.y + rhs.y)
+        Self::new(self.x + rhs.x(), self.y + rhs.y())
     }
 }
 
@@ -121,7 +121,7 @@ impl Sub<Vector2> for Point2 {
     type Output = Self;
 
     fn sub(self, rhs: Vector2) -> Self::Output {
-        Self::new(self.x - rhs.x, self.y - rhs.y)
+        Self::new(self.x - rhs.x(), self.y - rhs.y())
     }
 }
 

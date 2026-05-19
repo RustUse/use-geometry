@@ -5,14 +5,14 @@ use use_coordinate::GeometryError;
 use use_vector::Vector3;
 
 fn validate_vector3(name: &'static str, vector: Vector3) -> Result<Vector3, GeometryError> {
-    if !vector.x.is_finite() {
-        return Err(GeometryError::non_finite_component(name, "x", vector.x));
+    if !vector.x().is_finite() {
+        return Err(GeometryError::non_finite_component(name, "x", vector.x()));
     }
-    if !vector.y.is_finite() {
-        return Err(GeometryError::non_finite_component(name, "y", vector.y));
+    if !vector.y().is_finite() {
+        return Err(GeometryError::non_finite_component(name, "y", vector.y()));
     }
-    if !vector.z.is_finite() {
-        return Err(GeometryError::non_finite_component(name, "z", vector.z));
+    if !vector.z().is_finite() {
+        return Err(GeometryError::non_finite_component(name, "z", vector.z()));
     }
     Ok(vector)
 }
