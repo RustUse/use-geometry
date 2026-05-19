@@ -3,7 +3,7 @@ name = "use-geometry"
 description = "Facade crate for the RustUse geometry workspace."
 publish = true
 authors.workspace = true
-version.workspace = true
+version = "0.1.0"
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
@@ -17,78 +17,242 @@ categories = ["mathematics", "science"]
 [package.metadata.docs.rs]
 all-features = true
 
+[features]
+default = ["full"]
+affine = ["dep:use-affine"]
+angle = ["dep:use-angle"]
+archimedean = ["dep:use-archimedean"]
+bezier = ["dep:use-bezier"]
+bounds = ["dep:use-bounds"]
+catalan-solid = ["dep:use-catalan-solid"]
+cell = ["dep:use-cell"]
+circle = ["dep:use-circle"]
+complex = ["dep:use-complex"]
+configuration = ["dep:use-configuration"]
+congruence = ["dep:use-congruence"]
+conic = ["dep:use-conic"]
+containment = ["dep:use-containment"]
+coordinate = ["dep:use-coordinate"]
+coxeter = ["dep:use-coxeter"]
+crease = ["dep:use-crease"]
+curve = ["dep:use-curve"]
+delaunay = ["dep:use-delaunay"]
+dihedral = ["dep:use-dihedral"]
+dimension = ["dep:use-dimension"]
+distance = ["dep:use-distance"]
+duality = ["dep:use-duality"]
+face = ["dep:use-face"]
+folding = ["dep:use-folding"]
+hull = ["dep:use-hull"]
+hyperplane = ["dep:use-hyperplane"]
+hypersphere = ["dep:use-hypersphere"]
+incidence = ["dep:use-incidence"]
+intersection = ["dep:use-intersection"]
+inversion = ["dep:use-inversion"]
+johnson-solid = ["dep:use-johnson-solid"]
+line = ["dep:use-line"]
+linkage = ["dep:use-linkage"]
+manifold = ["dep:use-manifold"]
+mesh = ["dep:use-mesh"]
+orientation = ["dep:use-orientation"]
+origami = ["dep:use-origami"]
+orthotope = ["dep:use-orthotope"]
+plane = ["dep:use-plane"]
+point = ["dep:use-point"]
+polygon = ["dep:use-polygon"]
+polyhedral-net = ["dep:use-polyhedral-net"]
+polyhedron = ["dep:use-polyhedron"]
+polyline = ["dep:use-polyline"]
+polytope = ["dep:use-polytope"]
+projection = ["dep:use-projection"]
+projective = ["dep:use-projective"]
+ray = ["dep:use-ray"]
+rectangle = ["dep:use-rectangle"]
+reflection = ["dep:use-reflection"]
+regular-polytope = ["dep:use-regular-polytope"]
+rigid-folding = ["dep:use-rigid-folding"]
+schlafli = ["dep:use-schlafli"]
+segment = ["dep:use-segment"]
+similarity = ["dep:use-similarity"]
+simplex = ["dep:use-simplex"]
+sphere = ["dep:use-sphere"]
+spline = ["dep:use-spline"]
+surface = ["dep:use-surface"]
+tessellation = ["dep:use-tessellation"]
+torus = ["dep:use-torus"]
+transform = ["dep:use-transform"]
+triangle = ["dep:use-triangle"]
+triangulation = ["dep:use-triangulation"]
+unfolding = ["dep:use-unfolding"]
+uniform-polytope = ["dep:use-uniform-polytope"]
+voronoi = ["dep:use-voronoi"]
+wythoff = ["dep:use-wythoff"]
+full = [
+	"affine",
+	"angle",
+	"archimedean",
+	"bezier",
+	"bounds",
+	"catalan-solid",
+	"cell",
+	"circle",
+	"complex",
+	"configuration",
+	"congruence",
+	"conic",
+	"containment",
+	"coordinate",
+	"coxeter",
+	"crease",
+	"curve",
+	"delaunay",
+	"dihedral",
+	"dimension",
+	"distance",
+	"duality",
+	"face",
+	"folding",
+	"hull",
+	"hyperplane",
+	"hypersphere",
+	"incidence",
+	"intersection",
+	"inversion",
+	"johnson-solid",
+	"line",
+	"linkage",
+	"manifold",
+	"mesh",
+	"orientation",
+	"origami",
+	"orthotope",
+	"plane",
+	"point",
+	"polygon",
+	"polyhedral-net",
+	"polyhedron",
+	"polyline",
+	"polytope",
+	"projection",
+	"projective",
+	"ray",
+	"rectangle",
+	"reflection",
+	"regular-polytope",
+	"rigid-folding",
+	"schlafli",
+	"segment",
+	"similarity",
+	"simplex",
+	"sphere",
+	"spline",
+	"surface",
+	"tessellation",
+	"torus",
+	"transform",
+	"triangle",
+	"triangulation",
+	"unfolding",
+	"uniform-polytope",
+	"voronoi",
+	"wythoff",
+]
+
 [dependencies]
-use-affine.workspace = true
-use-angle.workspace = true
-use-archimedean.workspace = true
-use-bezier.workspace = true
-use-bounds.workspace = true
-use-catalan-solid.workspace = true
-use-cell.workspace = true
-use-circle.workspace = true
-use-complex.workspace = true
-use-congruence.workspace = true
-use-conic.workspace = true
-use-configuration.workspace = true
-use-containment.workspace = true
-use-coordinate.workspace = true
-use-coxeter.workspace = true
-use-crease.workspace = true
-use-curve.workspace = true
-use-delaunay.workspace = true
-use-dihedral.workspace = true
-use-dimension.workspace = true
-use-distance.workspace = true
-use-duality.workspace = true
-use-face.workspace = true
-use-folding.workspace = true
-use-hull.workspace = true
-use-hyperplane.workspace = true
-use-hypersphere.workspace = true
-use-incidence.workspace = true
-use-intersection.workspace = true
-use-inversion.workspace = true
-use-johnson-solid.workspace = true
-use-line.workspace = true
-use-linkage.workspace = true
-use-manifold.workspace = true
-use-mesh.workspace = true
-use-orientation.workspace = true
-use-origami.workspace = true
-use-orthotope.workspace = true
-use-plane.workspace = true
-use-point.workspace = true
-use-polygon.workspace = true
-use-polyhedral-net.workspace = true
-use-polyhedron.workspace = true
-use-polyline.workspace = true
-use-polytope.workspace = true
-use-projective.workspace = true
-use-projection.workspace = true
-use-ray.workspace = true
-use-rectangle.workspace = true
-use-reflection.workspace = true
-use-regular-polytope.workspace = true
-use-rigid-folding.workspace = true
-use-schlafli.workspace = true
-use-segment.workspace = true
-use-similarity.workspace = true
-use-simplex.workspace = true
-use-sphere.workspace = true
-use-spline.workspace = true
-use-surface.workspace = true
-use-tessellation.workspace = true
-use-torus.workspace = true
-use-transform.workspace = true
-use-triangle.workspace = true
-use-triangulation.workspace = true
-use-unfolding.workspace = true
-use-uniform-polytope.workspace = true
-use-voronoi.workspace = true
-use-wythoff.workspace = true
+use-affine = { workspace = true, optional = true }
+use-angle = { workspace = true, optional = true }
+use-archimedean = { workspace = true, optional = true }
+use-bezier = { workspace = true, optional = true }
+use-bounds = { workspace = true, optional = true }
+use-catalan-solid = { workspace = true, optional = true }
+use-cell = { workspace = true, optional = true }
+use-circle = { workspace = true, optional = true }
+use-complex = { workspace = true, optional = true }
+use-congruence = { workspace = true, optional = true }
+use-conic = { workspace = true, optional = true }
+use-configuration = { workspace = true, optional = true }
+use-containment = { workspace = true, optional = true }
+use-coordinate = { workspace = true, optional = true }
+use-coxeter = { workspace = true, optional = true }
+use-crease = { workspace = true, optional = true }
+use-curve = { workspace = true, optional = true }
+use-delaunay = { workspace = true, optional = true }
+use-dihedral = { workspace = true, optional = true }
+use-dimension = { workspace = true, optional = true }
+use-distance = { workspace = true, optional = true }
+use-duality = { workspace = true, optional = true }
+use-face = { workspace = true, optional = true }
+use-folding = { workspace = true, optional = true }
+use-hull = { workspace = true, optional = true }
+use-hyperplane = { workspace = true, optional = true }
+use-hypersphere = { workspace = true, optional = true }
+use-incidence = { workspace = true, optional = true }
+use-intersection = { workspace = true, optional = true }
+use-inversion = { workspace = true, optional = true }
+use-johnson-solid = { workspace = true, optional = true }
+use-line = { workspace = true, optional = true }
+use-linkage = { workspace = true, optional = true }
+use-manifold = { workspace = true, optional = true }
+use-mesh = { workspace = true, optional = true }
+use-orientation = { workspace = true, optional = true }
+use-origami = { workspace = true, optional = true }
+use-orthotope = { workspace = true, optional = true }
+use-plane = { workspace = true, optional = true }
+use-point = { workspace = true, optional = true }
+use-polygon = { workspace = true, optional = true }
+use-polyhedral-net = { workspace = true, optional = true }
+use-polyhedron = { workspace = true, optional = true }
+use-polyline = { workspace = true, optional = true }
+use-polytope = { workspace = true, optional = true }
+use-projective = { workspace = true, optional = true }
+use-projection = { workspace = true, optional = true }
+use-ray = { workspace = true, optional = true }
+use-rectangle = { workspace = true, optional = true }
+use-reflection = { workspace = true, optional = true }
+use-regular-polytope = { workspace = true, optional = true }
+use-rigid-folding = { workspace = true, optional = true }
+use-schlafli = { workspace = true, optional = true }
+use-segment = { workspace = true, optional = true }
+use-similarity = { workspace = true, optional = true }
+use-simplex = { workspace = true, optional = true }
+use-sphere = { workspace = true, optional = true }
+use-spline = { workspace = true, optional = true }
+use-surface = { workspace = true, optional = true }
+use-tessellation = { workspace = true, optional = true }
+use-torus = { workspace = true, optional = true }
+use-transform = { workspace = true, optional = true }
+use-triangle = { workspace = true, optional = true }
+use-triangulation = { workspace = true, optional = true }
+use-unfolding = { workspace = true, optional = true }
+use-uniform-polytope = { workspace = true, optional = true }
+use-voronoi = { workspace = true, optional = true }
+use-wythoff = { workspace = true, optional = true }
 
 [dev-dependencies]
 proptest.workspace = true
+
+[[example]]
+name = "validated_construction"
+required-features = ["full"]
+
+[[test]]
+name = "facade_feature_matrix"
+required-features = [
+	"folding",
+	"mesh",
+	"point",
+	"polyhedral-net",
+	"regular-polytope",
+	"schlafli",
+]
+
+[[test]]
+name = "property_invariants"
+required-features = ["full"]
+
+[[test]]
+name = "validated_api"
+required-features = ["full"]
 
 [lints]
 workspace = true

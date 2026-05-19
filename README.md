@@ -3,8 +3,13 @@
 Pure geometry primitives and foundational vocabulary for RustUse.
 
 `use-geometry` is the RustUse set for small, composable geometry building blocks. The top-level
-`use-geometry` crate is a facade-only crate: it contains crate documentation, public reexports, and
-a prelude module. Implementation lives in focused child crates with explicit boundaries.
+`use-geometry` crate is a feature-gated facade-only crate: it contains crate documentation, public
+reexports, child-crate namespace modules, and a prelude module. Implementation lives in focused
+child crates with explicit boundaries.
+
+The `0.1.0` facade release replaces the temporary `0.0.7` facade route and depends on geometry
+line primitives through `use-line 0.2.0`. Most child geometry crates remain on their
+already-published `0.0.6` versions.
 
 The set is intentionally broad inside pure geometry. Many advanced families begin with primitive
 value types, metadata records, or descriptors so algorithms can grow inside child crates without
@@ -16,7 +21,7 @@ object crates.
 | Group                                              | Crates                                                                                                                                                |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Foundations                                        | `use-coordinate`, `use-dimension`, `use-angle`, `use-point`                                                                                           |
-| Affine and Euclidean primitives                    | `use-bounds`, `use-line`, `use-ray`, `use-segment`, `use-plane`, `use-hyperplane`, `use-circle`, `use-sphere`, `use-hypersphere`, `use-torus`         |
+| Affine and Euclidean primitives                    | `use-bounds`, `use-line`, `use-ray`, `use-segment`, `use-plane`, `use-hyperplane`, `use-circle`, `use-sphere`, `use-hypersphere`, `use-torus` |
 | Transformations                                    | `use-transform`, `use-affine`, `use-projection`, `use-reflection`, `use-inversion`                                                                    |
 | Metric and relational geometry                     | `use-distance`, `use-orientation`, `use-intersection`, `use-containment`, `use-congruence`, `use-similarity`, `use-dihedral`                          |
 | Curves and conics                                  | `use-conic`, `use-curve`, `use-polyline`, `use-bezier`, `use-spline`                                                                                  |
@@ -36,6 +41,7 @@ object crates.
 - Schlafli symbols live in `use-schlafli`.
 - Hypersphere and 3-sphere vocabulary lives in `use-hypersphere`; ordinary three-dimensional sphere measurements live in `use-sphere`.
 - Dihedral angles live in `use-dihedral`.
+- Infinite line primitives publish as `use-line` starting at `0.2.0`; the Rust library name is `use_line`.
 - Polyhedral nets use `use-polyhedral-net`; `use-net` is reserved for the RustUse networking set.
 - `use-vector` remains in the sibling `use-math` workspace and is used by child crates that need vector primitives.
 - `use-geode` remains in `use-math` and is not part of spatial geometry.
@@ -46,7 +52,7 @@ Choose the facade crate when you want one dependency for the common geometry sur
 
 ```toml
 [dependencies]
-use-geometry = "0.0.6"
+use-geometry = "0.1.0"
 ```
 
 Choose child crates directly when you want a narrower dependency surface:
@@ -56,6 +62,13 @@ Choose child crates directly when you want a narrower dependency surface:
 use-point = "0.0.6"
 use-schlafli = "0.0.6"
 use-regular-polytope = "0.0.6"
+```
+
+You can also keep the facade but enable only selected child features:
+
+```toml
+[dependencies]
+use-geometry = { version = "0.1.0", default-features = false, features = ["point", "schlafli", "regular-polytope"] }
 ```
 
 ## Usage

@@ -89,6 +89,34 @@ Publish the workspace in dependency order:
 
 The `Publish` workflow uses that order automatically when `crate = all`.
 
+The geometry line child crate publishes as `use-line` starting at version `0.2.0`. Its Rust library
+name is `use_line`.
+
+## Temporary package correction
+
+The temporary facade route published `use-geometry 0.0.7` with a dependency on
+`use-geometry-line 0.0.6`. The corrected route is:
+
+1. Publish `use-line 0.2.0`.
+2. Publish `use-geometry 0.1.0`.
+3. Yank `use-geometry 0.0.7` and `use-geometry-line 0.0.6` after the corrected packages are live.
+
+## Facade-only patch releases
+
+Use a facade-only patch when the `use-geometry` facade changes but child crates do not need a new
+version. The `0.1.0` facade release is mostly facade-only, but it depends on the renamed geometry
+line package at `use-line 0.2.0`.
+
+For this path, do not use `crate = all`. Validate and publish only the facade:
+
+```sh
+cargo publish --dry-run --allow-dirty -p use-geometry
+cargo publish --allow-dirty -p use-geometry
+```
+
+Before publishing, confirm the matching child crate versions in `crates/use-geometry/Cargo.toml`
+are already visible on crates.io.
+
 ## Dry-run publish
 
 Use the `Publish` workflow with:

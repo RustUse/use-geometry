@@ -3,7 +3,7 @@ name = "use-line"
 description = "Small 2D line primitives for RustUse geometry"
 publish = true
 authors.workspace = true
-version.workspace = true
+version = "0.2.0"
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
@@ -16,6 +16,9 @@ categories = ["mathematics", "science"]
 
 [package.metadata.docs.rs]
 all-features = true
+
+[lib]
+name = "use_line"
 
 [dependencies]
 use-coordinate.workspace = true

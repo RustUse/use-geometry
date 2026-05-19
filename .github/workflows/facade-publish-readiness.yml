@@ -4,7 +4,7 @@ name: Facade Publish Readiness
   workflow_dispatch:
     inputs:
       registry-ready:
-        description: Confirm that matching focused-crate versions are live on crates.io
+        description: Confirm that required focused-crate versions are live on crates.io
         required: true
         type: boolean
 
@@ -30,7 +30,7 @@ jobs:
           cache-workspaces: |
             . -> target
 
-      - name: Confirm focused crates are visible on crates.io
+      - name: Confirm required focused crates are visible on crates.io
         run: |
           for crate in $FOCUSED_CRATES; do
             curl --fail --silent --show-error "https://crates.io/api/v1/crates/${crate}" > /dev/null

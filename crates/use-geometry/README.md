@@ -1,20 +1,21 @@
 # use-geometry
 
-`use-geometry` is the facade crate for the RustUse geometry workspace.
+`use-geometry` is the feature-gated facade crate for the RustUse geometry workspace.
 
 It reexports the focused child crates that make up the set so callers can depend on one crate for
 pure geometry primitives, descriptors, notation, validation errors, and direct measurement helpers
 while implementation stays split into explicit child crates.
 
-The facade contains only crate-level documentation, public reexports, and the `prelude` module.
-Many child crates begin with minimal primitives and metadata rather than full algorithms.
+The facade contains only crate-level documentation, public reexports, feature-gated child-crate
+namespaces, and the `prelude` module. Many child crates begin with minimal primitives and metadata
+rather than full algorithms.
 
 ## Taxonomy
 
 | Group                                              | Reexported crates                                                                                                                                     |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Foundations                                        | `use-coordinate`, `use-dimension`, `use-angle`, `use-point`                                                                                           |
-| Affine and Euclidean primitives                    | `use-bounds`, `use-line`, `use-ray`, `use-segment`, `use-plane`, `use-hyperplane`, `use-circle`, `use-sphere`, `use-hypersphere`, `use-torus`         |
+| Affine and Euclidean primitives                    | `use-bounds`, `use-line`, `use-ray`, `use-segment`, `use-plane`, `use-hyperplane`, `use-circle`, `use-sphere`, `use-hypersphere`, `use-torus` |
 | Transformations                                    | `use-transform`, `use-affine`, `use-projection`, `use-reflection`, `use-inversion`                                                                    |
 | Metric and relational geometry                     | `use-distance`, `use-orientation`, `use-intersection`, `use-containment`, `use-congruence`, `use-similarity`, `use-dihedral`                          |
 | Curves and conics                                  | `use-conic`, `use-curve`, `use-polyline`, `use-bezier`, `use-spline`                                                                                  |
@@ -31,12 +32,27 @@ Many child crates begin with minimal primitives and metadata rather than full al
 
 ```toml
 [dependencies]
-use-geometry = "0.0.6"
+use-geometry = "0.1.0"
 ```
+
+The default feature set enables `full`, which reexports every child crate. Disable default features
+when you want a smaller facade surface:
+
+```toml
+[dependencies]
+use-geometry = { version = "0.1.0", default-features = false, features = ["point", "schlafli", "regular-polytope"] }
+```
+
+Every child crate has a matching feature name without the `use-` prefix. Hyphenated feature names
+use underscore namespace modules, such as `regular-polytope` through `use_geometry::regular_polytope`.
+The line feature depends on the `use-line` package while exposing the `use_line` library through
+`use_geometry::line`.
 
 ## Example
 
 ```rust
+# #[cfg(feature = "full")]
+# fn main() -> Result<(), use_geometry::GeometryError> {
 use use_geometry::{
     Aabb2, Circle, Line2, Orientation2, Point2, RegularPolytope4, Segment2, Sphere,
     Triangle, try_orientation_2d,
@@ -61,13 +77,17 @@ assert!(circle.contains_point(Point2::new(0.0, 3.0)));
 assert!(line.contains_point(Point2::new(2.0, 0.0)));
 assert!(bounds.contains_point(Point2::new(0.0, 1.5)));
 assert_eq!(RegularPolytope4::TwentyFourCell.schlafli_symbol().to_string(), "{3, 4, 3}");
-# Ok::<(), use_geometry::GeometryError>(())
+# Ok(())
+# }
+# #[cfg(not(feature = "full"))]
+# fn main() {}
 ```
 
 ## Notes
 
-- Root exports are direct glob reexports from child crates.
-- The prelude reexports the same child crate surface explicitly.
+- Root exports are feature-gated reexports from child crates.
+- Namespace modules such as `point`, `schlafli`, and `regular_polytope` mirror child crates.
+- The prelude reexports the same child crate surface through enabled features.
 - Named objects belong inside family crates, not standalone crates.
 - `use-vector` remains in the `use-math` workspace and is used directly by child crates that need vector types.
 - `use-complex` in this workspace means geometric complex and cell-complex vocabulary, not complex numbers.

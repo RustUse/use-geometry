@@ -115,7 +115,7 @@ use-incidence = { version = "0.0.6", path = "crates/use-incidence" }
 use-intersection = { version = "0.0.6", path = "crates/use-intersection" }
 use-inversion = { version = "0.0.6", path = "crates/use-inversion" }
 use-johnson-solid = { version = "0.0.6", path = "crates/use-johnson-solid" }
-use-line = { version = "0.0.6", path = "crates/use-line" }
+use-line = { version = "0.2.0", path = "crates/use-line" }
 use-linkage = { version = "0.0.6", path = "crates/use-linkage" }
 use-manifold = { version = "0.0.6", path = "crates/use-manifold" }
 use-mesh = { version = "0.0.6", path = "crates/use-mesh" }

@@ -303,7 +303,7 @@ dependencies = [
 
 [[package]]
 name = "use-geometry"
-version = "0.0.6"
+version = "0.1.0"
 dependencies = [
  "proptest",
  "use-affine",
@@ -419,7 +419,7 @@ version = "0.0.6"
 
 [[package]]
 name = "use-line"
-version = "0.0.6"
+version = "0.2.0"
 dependencies = [
  "use-coordinate",
  "use-orientation",
