@@ -408,7 +408,7 @@ changelog_update = true
 changelog_path = "./CHANGELOG.md"
 
 [[package]]
-name = "use-complex"
+name = "use-geometric-complex"
 release = true
 changelog_update = true
 changelog_path = "./CHANGELOG.md"

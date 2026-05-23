@@ -7,9 +7,9 @@ Pure geometry primitives and foundational vocabulary for RustUse.
 reexports, child-crate namespace modules, and a prelude module. Implementation lives in focused
 child crates with explicit boundaries.
 
-The `0.1.0` facade release replaces the temporary `0.0.7` facade route and depends on geometry
-line primitives through `use-line 0.2.0`. Most child geometry crates remain on their
-already-published `0.0.6` versions.
+The `0.2.1` facade release depends on geometry line primitives through `use-line 0.2.1`
+and geometric complex primitives through `use-geometric-complex 0.0.6`. Most child
+geometry crates remain on their already-published `0.0.6` versions.
 
 The set is intentionally broad inside pure geometry. Many advanced families begin with primitive
 value types, metadata records, or descriptors so algorithms can grow inside child crates without
@@ -30,7 +30,7 @@ object crates.
 | Polytopes and solids                               | `use-simplex`, `use-orthotope`, `use-polytope`, `use-polyhedron`, `use-regular-polytope`, `use-archimedean`, `use-catalan-solid`, `use-johnson-solid` |
 | Polytope notation and classification               | `use-schlafli`, `use-wythoff`, `use-coxeter`, `use-uniform-polytope`                                                                                  |
 | Incidence, projective geometry, and configurations | `use-incidence`, `use-projective`, `use-configuration`, `use-duality`                                                                                 |
-| Representations and complexes                      | `use-mesh`, `use-face`, `use-cell`, `use-complex`                                                                                                     |
+| Representations and complexes                      | `use-mesh`, `use-face`, `use-cell`, `use-geometric-complex`                                                                                           |
 | Constructions and decompositions                   | `use-hull`, `use-triangulation`, `use-tessellation`, `use-voronoi`, `use-delaunay`                                                                    |
 | Folding and unfolding                              | `use-folding`, `use-crease`, `use-origami`, `use-linkage`, `use-unfolding`, `use-rigid-folding`, `use-polyhedral-net`                                 |
 
@@ -42,6 +42,7 @@ object crates.
 - Hypersphere and 3-sphere vocabulary lives in `use-hypersphere`; ordinary three-dimensional sphere measurements live in `use-sphere`.
 - Dihedral angles live in `use-dihedral`.
 - Infinite line primitives publish as `use-line` starting at `0.2.0`; the Rust library name is `use_line`.
+- Geometric complex primitives publish as `use-geometric-complex`; the Rust library name remains `use_complex`.
 - Polyhedral nets use `use-polyhedral-net`; `use-net` is reserved for the RustUse networking set.
 - `use-vector` remains in the sibling `use-math` workspace and is used by child crates that need vector primitives.
 - `use-geode` remains in `use-math` and is not part of spatial geometry.
@@ -52,7 +53,7 @@ Choose the facade crate when you want one dependency for the common geometry sur
 
 ```toml
 [dependencies]
-use-geometry = "0.1.0"
+use-geometry = "0.2.1"
 ```
 
 Choose child crates directly when you want a narrower dependency surface:
@@ -68,7 +69,7 @@ You can also keep the facade but enable only selected child features:
 
 ```toml
 [dependencies]
-use-geometry = { version = "0.1.0", default-features = false, features = ["point", "schlafli", "regular-polytope"] }
+use-geometry = { version = "0.2.1", default-features = false, features = ["point", "schlafli", "regular-polytope"] }
 ```
 
 ## Usage

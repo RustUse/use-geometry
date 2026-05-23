@@ -57,7 +57,7 @@ PUBLISH_CRATES := \
 	use-mesh \
 	use-face \
 	use-cell \
-	use-complex \
+	use-geometric-complex \
 	use-hull \
 	use-triangulation \
 	use-tessellation \

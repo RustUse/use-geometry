@@ -72,7 +72,7 @@ Publish the workspace in dependency order:
 53. `use-mesh`
 54. `use-face`
 55. `use-cell`
-56. `use-complex`
+56. `use-geometric-complex`
 57. `use-hull`
 58. `use-triangulation`
 59. `use-tessellation`
@@ -218,7 +218,7 @@ for crate in \
   use-mesh \
   use-face \
   use-cell \
-  use-complex \
+  use-geometric-complex \
   use-hull \
   use-triangulation \
   use-tessellation \

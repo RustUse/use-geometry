@@ -24,7 +24,7 @@ rather than full algorithms.
 | Polytopes and solids                               | `use-simplex`, `use-orthotope`, `use-polytope`, `use-polyhedron`, `use-regular-polytope`, `use-archimedean`, `use-catalan-solid`, `use-johnson-solid` |
 | Polytope notation and classification               | `use-schlafli`, `use-wythoff`, `use-coxeter`, `use-uniform-polytope`                                                                                  |
 | Incidence, projective geometry, and configurations | `use-incidence`, `use-projective`, `use-configuration`, `use-duality`                                                                                 |
-| Representations and complexes                      | `use-mesh`, `use-face`, `use-cell`, `use-complex`                                                                                                     |
+| Representations and complexes                      | `use-mesh`, `use-face`, `use-cell`, `use-geometric-complex`                                                                                           |
 | Constructions and decompositions                   | `use-hull`, `use-triangulation`, `use-tessellation`, `use-voronoi`, `use-delaunay`                                                                    |
 | Folding and unfolding                              | `use-folding`, `use-crease`, `use-origami`, `use-linkage`, `use-unfolding`, `use-rigid-folding`, `use-polyhedral-net`                                 |
 
@@ -32,7 +32,7 @@ rather than full algorithms.
 
 ```toml
 [dependencies]
-use-geometry = "0.1.0"
+use-geometry = "0.2.1"
 ```
 
 The default feature set enables `full`, which reexports every child crate. Disable default features
@@ -40,13 +40,14 @@ when you want a smaller facade surface:
 
 ```toml
 [dependencies]
-use-geometry = { version = "0.1.0", default-features = false, features = ["point", "schlafli", "regular-polytope"] }
+use-geometry = { version = "0.2.1", default-features = false, features = ["point", "schlafli", "regular-polytope"] }
 ```
 
 Every child crate has a matching feature name without the `use-` prefix. Hyphenated feature names
 use underscore namespace modules, such as `regular-polytope` through `use_geometry::regular_polytope`.
 The line feature depends on the `use-line` package while exposing the `use_line` library through
-`use_geometry::line`.
+`use_geometry::line`. The complex feature depends on the `use-geometric-complex` package while
+exposing the `use_complex` library through `use_geometry::complex`.
 
 ## Example
 
@@ -90,4 +91,4 @@ assert_eq!(RegularPolytope4::TwentyFourCell.schlafli_symbol().to_string(), "{3, 
 - The prelude reexports the same child crate surface through enabled features.
 - Named objects belong inside family crates, not standalone crates.
 - `use-vector` remains in the `use-math` workspace and is used directly by child crates that need vector types.
-- `use-complex` in this workspace means geometric complex and cell-complex vocabulary, not complex numbers.
+- The `use-geometric-complex` package provides geometric complex and cell-complex vocabulary; the `use-complex` package remains the sibling math complex-number crate.

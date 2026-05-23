@@ -56,7 +56,7 @@ members = [
 	"crates/use-mesh",
 	"crates/use-face",
 	"crates/use-cell",
-	"crates/use-complex",
+	"crates/use-geometric-complex",
 	"crates/use-hull",
 	"crates/use-triangulation",
 	"crates/use-tessellation",
@@ -92,7 +92,7 @@ use-bounds = { version = "0.0.6", path = "crates/use-bounds" }
 use-catalan-solid = { version = "0.0.6", path = "crates/use-catalan-solid" }
 use-cell = { version = "0.0.6", path = "crates/use-cell" }
 use-circle = { version = "0.0.6", path = "crates/use-circle" }
-use-complex = { version = "0.0.6", path = "crates/use-complex" }
+use-complex = { version = "0.0.6", package = "use-geometric-complex", path = "crates/use-geometric-complex" }
 use-congruence = { version = "0.0.6", path = "crates/use-congruence" }
 use-conic = { version = "0.0.6", path = "crates/use-conic" }
 use-configuration = { version = "0.0.6", path = "crates/use-configuration" }
@@ -216,7 +216,7 @@ first-publish-candidates = [
 	"use-mesh",
 	"use-face",
 	"use-cell",
-	"use-complex",
+	"use-geometric-complex",
 	"use-hull",
 	"use-triangulation",
 	"use-tessellation",

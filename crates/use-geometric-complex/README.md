@@ -1,9 +1,10 @@
-# use-complex
+# use-geometric-complex
 
 Geometric complex primitives for the RustUse geometry workspace.
 
-`use-complex` is about geometric complexes, cell complexes, and simplicial complexes. It is not a
-complex-number crate; complex numbers remain in `git_local/use-math/crates/use-complex`.
+`use-geometric-complex` is about geometric complexes, cell complexes, and simplicial complexes.
+It publishes with the Rust library name `use_complex`. The `use-complex` package name remains
+with the sibling `git_local/use-math/crates/use-complex` complex-number crate.
 
 ## Example
 

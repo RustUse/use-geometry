@@ -1,5 +1,5 @@
 [package]
-name = "use-complex"
+name = "use-geometric-complex"
 description = "Geometric complex primitives for the RustUse geometry workspace"
 publish = true
 authors.workspace = true
@@ -10,9 +10,12 @@ repository.workspace = true
 homepage.workspace = true
 rust-version.workspace = true
 readme = "README.md"
-documentation = "https://docs.rs/use-complex"
+documentation = "https://docs.rs/use-geometric-complex"
 keywords = ["geometry", "complex", "cell", "simplicial"]
 categories = ["mathematics", "science"]
+
+[lib]
+name = "use_complex"
 
 [package.metadata.docs.rs]
 all-features = true

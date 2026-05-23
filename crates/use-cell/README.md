@@ -3,7 +3,7 @@
 Cell primitives for the RustUse geometry workspace.
 
 `use-cell` provides small cell descriptors for representation-oriented geometry. Cell-complex
-collections live in `use-complex`, which focuses on geometric complexes rather than complex numbers.
+collections live in `use-geometric-complex`, which focuses on geometric complexes rather than complex numbers.
 
 ## Example
 

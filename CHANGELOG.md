@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## [0.2.1](https://github.com/RustUse/use-geometry/compare/use-geometry-v0.2.0...use-geometry-v0.2.1) - 2026-05-23
+
+### Changed
+
+- Published the geometry complex child crate as `use-geometric-complex 0.0.6`, preserving the Rust library name `use_complex` while leaving the `use-complex` package identity with the sibling `use-math` complex-number crate.
+- Updated the `use-geometry` facade to depend on `use-geometric-complex` for the `complex` feature.
+
 ## [0.2.0](https://github.com/RustUse/use-geometry/compare/use-geometry-v0.1.0...use-geometry-v0.2.0) - 2026-05-19
 
 ### Changed

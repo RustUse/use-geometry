@@ -213,13 +213,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "use-complex"
-version = "0.0.6"
-dependencies = [
- "use-cell",
-]
-
-[[package]]
 name = "use-configuration"
 version = "0.0.6"
 dependencies = [
@@ -302,8 +295,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "use-geometric-complex"
+version = "0.0.6"
+dependencies = [
+ "use-cell",
+]
+
+[[package]]
 name = "use-geometry"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "proptest",
  "use-affine",
@@ -314,7 +314,6 @@ dependencies = [
  "use-catalan-solid",
  "use-cell",
  "use-circle",
- "use-complex",
  "use-configuration",
  "use-congruence",
  "use-conic",
@@ -330,6 +329,7 @@ dependencies = [
  "use-duality",
  "use-face",
  "use-folding",
+ "use-geometric-complex",
  "use-hull",
  "use-hyperplane",
  "use-hypersphere",
